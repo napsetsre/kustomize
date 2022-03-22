@@ -13,7 +13,7 @@ spec:
   source:
     path: app-of-apps/manifests/pricelist-config
     repoURL: https://github.com/napsetsre/gitops-examples
-    targetRevision: master
+    targetRevision: pricelist-210
   syncPolicy:
     automated:
       prune: true
