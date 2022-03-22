@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pricelist-frontend
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  destination:
+    namespace: pricelist
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: app-of-apps/manifests/pricelist-frontend
+    repoURL: https://github.com/napsetsre/gitops-examples
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

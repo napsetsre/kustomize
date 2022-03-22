@@ -1,9 +1,0 @@
-- op: replace
-  path: /metadata/name
-  value: pricelist-app
-- op: add
-  path: /spec/source
-  value:
-    path: pricelist
-    repoURL: https://github.com/christianh814/gitops-examples.git
-    targetRevision: master
